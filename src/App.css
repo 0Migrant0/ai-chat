@@ -39,6 +39,22 @@ body {
   letter-spacing: 0.01em;
 }
 
+.logo_name{
+  background: linear-gradient(90deg, #10a37f, #8bbba8, #4e7fff, #a742f5);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  animation: gradient-animation 8s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 .App {
   display: flex;
   height: 100vh;

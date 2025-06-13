@@ -434,7 +434,7 @@ function App() {
             <button className="sidebar-toggle" onClick={toggleSidebar}>
               ☰
             </button>
-            <h1>Ollama Chat</h1>
+            <h1><span className='logo_name'>Migrant</span> Chat</h1>
           </div>
           <ModelSelector 
             models={models} 
@@ -447,8 +447,8 @@ function App() {
           <div className="messages-container">
             {messages.length === 0 ? (
               <div className="welcome-message">
-                <h2>Welcome to Ollama Chat!</h2>
-                <p>This is a ChatGPT-like interface for your local Ollama model.</p>
+                <h2>Welcome to Migrant Chat!</h2>
+                <p>This is a AI Chat interface for your local model.</p>
                 <p>Start a conversation by typing a message below.</p>
               </div>
             ) : (
