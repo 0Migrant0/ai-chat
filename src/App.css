@@ -114,14 +114,15 @@ body {
 
 .messages-container {
   flex: 1;
-  overflow-y: auto;
+  overflow-y: scroll;
   padding: 0;
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
   display: flex;
   flex-direction: column;
   background: linear-gradient(to bottom, var(--user-message-bg) 0%, rgba(52, 53, 65, 0.95) 100%);
   box-shadow: inset 0 -10px 10px -10px rgba(0, 0, 0, 0.1);
   padding: 1rem 0.5rem;
+  min-height: 0;
 }
 
 /* Custom scrollbar - ChatGPT style */
@@ -192,8 +193,9 @@ body {
   width: 100%;
   margin-bottom: 1rem;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   justify-content: flex-start;
+  min-height: fit-content;
 }
 
 .message::before {
@@ -230,6 +232,9 @@ body {
   padding: 0.75rem 1rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   align-self: flex-end;
+  height: auto;
+  min-height: fit-content;
+  word-wrap: break-word;
 }
 
 .assistant-message {
@@ -241,6 +246,9 @@ body {
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   align-self: flex-start;
+  height: auto;
+  min-height: fit-content;
+  word-wrap: break-word;
 }
 
 .assistant-message::after {
@@ -261,6 +269,10 @@ body {
   animation: messageAppear 0.4s ease-out;
   position: relative;
   z-index: 1;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  height: auto;
+  min-height: fit-content;
 }
 
 .user-message .message-content {
